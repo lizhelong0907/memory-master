@@ -1,4 +1,4 @@
-# 🧠 Memory Master v2.6.0
+# 🧠 Memory Master v2.6.1
 
 **Local Memory System with Structured Indexing and Auto-Learning**
 
@@ -10,7 +10,7 @@ A memory system for AI agents with **auto-write**, **heuristic recall**, and **a
 
 ---
 
-## ✨ v2.6.0 What's New
+## ✨ v2.6.1 What's New
 
 ### Key Improvements
 
@@ -101,11 +101,11 @@ A memory system for AI agents with **auto-write**, **heuristic recall**, and **a
 # Install
 clawdhub install memory-master
 
-# Initialize (Enhanced v2.6.0 auto-migration)
+# Initialize (Enhanced v2.6.1 auto-migration)
 clawdhub init memory-master
 ```
 
-**Enhanced Auto-migration (v2.6.0):**
+**Enhanced Auto-migration (v2.6.1):**
 - Migrates heartbeat rules from AGENTS.md → HEARTBEAT.md
 - Optimizes AGENTS.md (deduplicates, streamlines, restructures)
 - Converts MEMORY.md → pure lessons/experience repository
@@ -116,7 +116,7 @@ clawdhub init memory-master
 
 ## Comparison
 
-| Feature | v2.5.x | v2.6.0 |
+| Feature | v2.5.x | v2.6.1 |
 |---------|--------|---------|
 | Rules execution | May fail | ✅ Guaranteed |
 | Token usage | Higher | ✅ ~50% less |
@@ -136,7 +136,7 @@ clawdhub init memory-master
 
 ## ⚠️ Upgrade Note
 
-v2.6.0 will automatically:
+v2.6.1 will automatically:
 1. Merge rules into AGENTS.md
 2. Convert MEMORY.md to lessons-only
 3. Create/update index files
