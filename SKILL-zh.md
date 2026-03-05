@@ -1,6 +1,6 @@
 ---
 name: memory-master
-version: 2.6.0
+version: 2.6.1
 description: "本地记忆系统，结构化索引+自动学习。自动写记忆，启发式召回，知识不足时自动网络学习。兼容 self-improving-agent：自动记录 skill 完成和错误到知识库。"
 author: 李哲龙
 tags: [memory, 记忆, 索引, 上下文]
@@ -12,7 +12,7 @@ tags: [memory, 记忆, 索引, 上下文]
 
 ---
 
-## ⚠️ v2.6.0 重要更新
+## ⚠️ v2.6.1 重要更新
 
 **本次更新涉及核心文件迁移，升级前请注意：**
 

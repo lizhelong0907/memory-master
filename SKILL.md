@@ -1,6 +1,6 @@
 ---
 name: memory-master
-version: 2.6.0
+version: 2.6.1
 description: "Local memory system with structured indexing and auto-learning. Auto-write, heuristic recall, auto learning when knowledge is insufficient. Compatible with self-improving-agent: auto-records skill completions and errors to knowledge base."
 author: 李哲龙
 tags: [memory, recall, indexing, context]
