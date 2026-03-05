@@ -242,49 +242,15 @@ cp ~/.agents/skills/memory-master/templates/knowledge-index.md ~/.openclaw/works
 
 ---
 
-## 实用脚本 (v2.6.1+)
+## 压缩检测 (v2.6.1+)
 
-记忆大师包含额外的实用脚本用于内存管理：
-
-### 统计功能
-```bash
-node ~/.agents/skills/memory-master/scripts/stats.js
-```
-显示：
-- 每日记忆文件数量和大小
-- 知识库文件数量和大小
-- 索引文件状态
-- 核心文件状态（AGENTS.md, MEMORY.md, HEARTBEAT.md）
-- 总存储使用量
-
-### 压缩检测
 ```bash
 node ~/.agents/skills/memory-master/scripts/detect.js
 ```
 监控上下文使用率：
 - **✅ 安全** (<70%)：正常运行
-- **⚠️ 警告** (70-85%)：建议整理
-- **🚨 危急** (>85%)：建议立即快照
-
-### 快照管理
-```bash
-# 创建快照
-node ~/.agents/skills/memory-master/scripts/snapshot.js create
-
-# 列出快照
-node ~/.agents/skills/memory-master/scripts/snapshot.js list
-
-# 删除快照
-node ~/.agents/skills/memory-master/scripts/snapshot.js delete <名称>
-```
-
-**建议的心跳集成：**
-```markdown
-## 记忆管理（每2小时）
-1. 运行: node ~/.agents/skills/memory-master/scripts/detect.js
-2. 如果危急: node ~/.agents/skills/memory-master/scripts/snapshot.js create
-3. 每天 23:00: 考虑整理记忆
-```
+- **⚠️ 警告** (70-85%)：建议整理记忆
+- **🚨 危急** (>85%)：需要归档旧记忆
 
 ---
 
