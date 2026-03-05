@@ -125,15 +125,17 @@ clawdhub init memory-master
 
 ---
 
-## Compression Detection (v2.6.1+)
+## Compression Detection (v2.6.3+)
+
+**⚠️ Must run after EVERY response!**
 
 ```bash
 node ~/.agents/skills/memory-master/scripts/detect.js
 ```
-Monitors context usage:
-- ✅ Safe (<70%)
-- ⚠️ Warning (70-85%)
-- 🚨 Critical (>85%)
+Display status after every response:
+- 50%: `📝 上下文使用率：50% - 是否需要记录记忆或知识库？`
+- 70%: `⚠️ 上下文使用率：70% - 建议记录当前进度`
+- 85%: `🚨 上下文使用率：85% - 请立即记录当前进度！`
 
 ---
 

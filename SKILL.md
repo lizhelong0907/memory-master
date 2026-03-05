@@ -435,15 +435,24 @@ cp ~/.agents/skills/memory-master/templates/knowledge-index.md ~/.openclaw/works
 
 ---
 
-## Compression Detection (v2.6.1+)
+## Compression Detection (v2.6.3+)
 
+**⚠️ Important: Must run after EVERY response!**
+
+### Run after every response:
 ```bash
 node ~/.agents/skills/memory-master/scripts/detect.js
 ```
-Monitors context usage:
-- **✅ Safe** (<70%): Normal operation
-- **⚠️ Warning** (70-85%): Consider organizing memories
-- **🚨 Critical** (>85%): Need to archive old memories
+
+Display status at the bottom of every response:
+- **50%**: `📝 上下文使用率：50% - 是否需要记录记忆或知识库？`
+- **70%**: `⚠️ 上下文使用率：70% - 建议记录当前进度`
+- **85%**: `🚨 上下文使用率：85% - 请立即记录当前进度！`
+
+### Why this matters:
+- Prevents context loss from compression
+- Reminds user to record memories before data is lost
+- Works with heartbeat but runs more frequently
 
 ---
 
