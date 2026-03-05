@@ -435,6 +435,52 @@ cp ~/.agents/skills/memory-master/templates/knowledge-index.md ~/.openclaw/works
 
 ---
 
+## Utility Scripts (v2.6.1+)
+
+Memory Master includes additional utility scripts for memory management:
+
+### Statistics
+```bash
+node ~/.agents/skills/memory-master/scripts/stats.js
+```
+Shows:
+- Daily memory file count and size
+- Knowledge base file count and size
+- Index file status
+- Core files status (AGENTS.md, MEMORY.md, HEARTBEAT.md)
+- Total storage usage
+
+### Compression Detection
+```bash
+node ~/.agents/skills/memory-master/scripts/detect.js
+```
+Monitors context usage:
+- **✅ Safe** (<70%): Normal operation
+- **⚠️ Warning** (70-85%): Consider organizing
+- **🚨 Critical** (>85%): Immediate snapshot recommended
+
+### Snapshot Management
+```bash
+# Create snapshot
+node ~/.agents/skills/memory-master/scripts/snapshot.js create
+
+# List snapshots
+node ~/.agents/skills/memory-master/scripts/snapshot.js list
+
+# Delete snapshot
+node ~/.agents/skills/memory-master/scripts/snapshot.js delete <name>
+```
+
+**Recommended Heartbeat Integration:**
+```markdown
+## Memory Management (every 2 hours)
+1. Run: node ~/.agents/skills/memory-master/scripts/detect.js
+2. If critical: node ~/.agents/skills/memory-master/scripts/snapshot.js create
+3. Daily at 23:00: Consider organizing memories
+```
+
+---
+
 ## The Memory Master Promise
 
 > *"An AI agent is only as good as its memory. Give your agent a memory system that never forgets, never wastes, and always delivers exactly what's needed."*

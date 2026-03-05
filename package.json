@@ -5,6 +5,9 @@
   "main": "scripts/init.js",
   "scripts": {
     "init": "node scripts/init.js",
+    "stats": "node scripts/stats.js",
+    "detect": "node scripts/detect.js",
+    "snapshot": "node scripts/snapshot.js",
     "test": "echo \"No tests specified\""
   },
   "keywords": [

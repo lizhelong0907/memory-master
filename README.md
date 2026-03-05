@@ -125,6 +125,34 @@ clawdhub init memory-master
 
 ---
 
+## Utility Scripts (v2.6.1+)
+
+### Statistics
+```bash
+node ~/.agents/skills/memory-master/scripts/stats.js
+```
+Shows memory file count, size, and health status.
+
+### Compression Detection
+```bash
+node ~/.agents/skills/memory-master/scripts/detect.js
+```
+Monitors context usage:
+- ✅ Safe (<70%)
+- ⚠️ Warning (70-85%)
+- 🚨 Critical (>85%)
+
+### Snapshots
+```bash
+# Create snapshot
+node ~/.agents/skills/memory-master/scripts/snapshot.js create
+
+# List snapshots
+node ~/.agents/skills/memory-master/scripts/snapshot.js list
+```
+
+---
+
 ## Rules Summary
 
 - Rules in AGENTS.md → always executed
