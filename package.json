@@ -1,6 +1,6 @@
 {
   "name": "memory-master",
-  "version": "2.6.4",
+  "version": "2.6.5",
   "description": "Local memory system with structured indexing and auto-learning",
   "main": "scripts/init.js",
   "scripts": {
